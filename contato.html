@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Contato</h1>
+</header>
+
+<nav>
+  <a href="index.html">Início</a>
+  <a href="dancas.html">Danças</a>
+  <a href="frevo.html">Frevo</a>
+  <a href="ciranda.html">Ciranda</a>
+  <a href="contato.html">Contato</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Envie sua mensagem</h2>
+    <p>Preencha o formulário abaixo para enviar uma mensagem pelo WhatsApp.</p>
+
+    <form>
+      <label>Nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome">
+
+      <label>Mensagem:</label>
+      <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+
+      <button type="button" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Site criado por Emilly Maria</p>
+</footer>
+
+<script>
+function enviarWhatsApp() {
+  var nome = document.getElementById("nome").value;
+  var mensagem = document.getElementById("mensagem").value;
+
+  var texto = "Olá, meu nome é " + nome + ". " + mensagem;
+
+  var numero = "5581986909414";
+
+  var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
